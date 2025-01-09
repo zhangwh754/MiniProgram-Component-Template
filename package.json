@@ -1,0 +1,14 @@
+{
+  "name": "MiniProgram-Component-Template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/wechat-miniprogram": "^3.4.8",
+    "typescript": "^5.7.3"
+  }
+}
