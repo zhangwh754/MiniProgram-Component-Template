@@ -1,0 +1,16 @@
+<view class="flex-table">
+  <!-- 表头 -->
+  <view class="header">
+    <block wx:for="{{headers}}" wx:key="index">
+      <view class="cell" style="width: {{item.width}}rpx;">{{item.text}}</view>
+    </block>
+  </view>
+  <!-- 表格行 -->
+  <block wx:for="{{rows}}" wx:key="index">
+    <view class="row">
+      <block wx:for="{{item}}" wx:key="index">
+        <view class="cell" style="width: {{headers[index].width}}rpx;">{{item}}</view>
+      </block>
+    </view>
+  </block>
+</view>
