@@ -1,9 +1,11 @@
 {
-  "name": "MiniProgram-Component-Template",
+  "name": "miniprogram-component-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "compile": "./node_modules/typescript/bin/tsc"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
