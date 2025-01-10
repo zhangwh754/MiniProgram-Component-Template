@@ -1,0 +1,23 @@
+.flex-table {
+  margin: 20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.header,
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.cell {
+  border: 1rpx solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-all; /* 强制在任意字符处换行 */
+}

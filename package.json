@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "./node_modules/typescript/bin/tsc"
+    "dev": "gulp"
   },
   "keywords": [],
   "author": "",
