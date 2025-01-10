@@ -12,6 +12,7 @@
 }
 
 .cell {
+  flex-grow: 1;
   border: 1rpx solid #ccc;
   padding: 20rpx;
   box-sizing: border-box;
@@ -19,5 +20,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  word-break: break-all; /* 强制在任意字符处换行 */
+  word-break: break-all;
 }

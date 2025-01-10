@@ -1,15 +1,15 @@
 <view class="flex-table">
   <!-- 表头 -->
   <view class="header">
-    <block wx:for="{{headers}}" wx:key="index">
-      <view class="cell" style="width: {{item.width}}rpx;">{{item.text}}</view>
+    <block wx:for="{{tableColumns}}" wx:key="key">
+      <view class="cell" style="width: {{item.width ? item.width + 'rpx' : 'auto'}}">{{item.title}}</view>
     </block>
   </view>
   <!-- 表格行 -->
-  <block wx:for="{{rows}}" wx:key="index">
+  <block wx:for="{{data}}" wx:key="index">
     <view class="row">
-      <block wx:for="{{item}}" wx:key="index">
-        <view class="cell" style="width: {{headers[index].width}}rpx;">{{item}}</view>
+      <block wx:for="{{tableColumns}}" wx:for-item="column" wx:key="key">
+        <view class="cell" style="width: {{column.width ? column.width + 'rpx' : 'auto'}}">{{item[column.key]}}</view>
       </block>
     </view>
   </block>

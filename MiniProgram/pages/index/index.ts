@@ -1,23 +1,32 @@
 Page({
-  data: {
-      // 表头数据
-      headers: [
-          { text: "啦啦啦头部", width: 100 }, // width 单位为 px
-          { text: "Header 2", width: 300 },
-          { text: "Header 3", width: 200 },
-      ],
-      // 表格行数据
-      rows: [
-          ["Cell 1", "Cell 2", "ThisIsAVeryLongTextWithoutSpaces"],
-          ["Cell 4", "Cell 5", "Cell 6"],
-          ["Cell 7", "Cell 8", "Cell 9"],
-      ],
-  },
-  onLoad() {
-      // 将列宽从 px 转换为 rpx
-      const headers = this.data.headers.map((header) => {
-          return Object.assign(Object.assign({}, header), { width: header.width * 2 });
-      });
-      this.setData({ headers });
-  },
+    data: {
+        tableColumns: [{
+            title: "姓名",
+            key: "name",
+            width: 200,
+        }, {
+            title: "年龄",
+            key: "age",
+            width: 100,
+        }, {
+            title: "性别",
+            key: "sex",
+            width: 100,
+        }],
+        data: [{
+            name: '张三',
+            age: 18,
+            sex: '男'
+        }, {
+            name: '李四',
+            age: 20,
+            sex: '女'
+        }, {
+            name: '【腾讯CoDesign】邀请你加入文件“上电微信2024”，点击链接立即加入',
+            age: 25,
+            sex: '男'
+        }],
+    },
+    onLoad() {
+    },
 });
