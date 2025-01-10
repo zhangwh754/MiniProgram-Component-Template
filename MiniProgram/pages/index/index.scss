@@ -1,23 +1,10 @@
-.flex-table {
-  margin: 20rpx 10rpx;
-  display: flex;
-  flex-direction: column;
-  width: auto;
-}
+.button {
+  white-space: no-wrap;
+  font-size: 24rpx;
 
-.header,
-.row {
-  display: flex;
-  width: 100%;
-}
-
-.cell {
-  border: 1rpx solid #ccc;
-  padding: 20rpx;
-  box-sizing: border-box;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  word-break: break-all; /* 强制在任意字符处换行 */
+  &.blue {
+    margin: 0 8rpx;
+    border: 1rpx solid #1890ff;
+    border-radius: 8rpx;
+  }
 }

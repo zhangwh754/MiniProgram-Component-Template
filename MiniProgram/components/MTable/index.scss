@@ -1,0 +1,39 @@
+.flex-table {
+  margin: 20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.header,
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.cell {
+  flex-grow: 1;
+  border: 1rpx solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-all;
+}
+
+.action-btn {
+  display: inline-block;
+  margin: 0 4rpx;
+  padding: 4rpx 4rpx;
+  font-size: 28rpx;
+}
+
+.edit-btn {
+  color: #1890ff;
+}
+
+.delete-btn {
+  color: #ff4d4f;
+}

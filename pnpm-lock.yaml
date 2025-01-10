@@ -29,6 +29,9 @@ importers:
       gulp-typescript:
         specifier: 6.0.0-alpha.1
         version: 6.0.0-alpha.1(typescript@5.7.3)
+      miniprogram-api-typings:
+        specifier: ^4.0.2
+        version: 4.0.2
       sass:
         specifier: ^1.83.1
         version: 1.83.1
@@ -928,6 +931,9 @@ packages:
 
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
+
+  miniprogram-api-typings@4.0.2:
+    resolution: {integrity: sha512-hDrWCaJamsMB6Sg+0oMzGgSOse8EzumfN+VQFBKtJe2LbeKibGruB/ptNd4viXdcdgfahQ+Ji5Z9v9meoG9iuw==}
 
   mitt@1.2.0:
     resolution: {integrity: sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw==}
@@ -2408,6 +2414,8 @@ snapshots:
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
+
+  miniprogram-api-typings@4.0.2: {}
 
   mitt@1.2.0: {}
 

@@ -1,16 +1,9 @@
-<view class="flex-table">
-  <!-- 表头 -->
-  <view class="header">
-    <block wx:for="{{headers}}" wx:key="index">
-      <view class="cell" style="width: {{item.width}}rpx;">{{item.text}}</view>
-    </block>
+<import src="../../template/msgItem.wxml" />
+
+<MTable columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
+  <view wx:for="{{data}}" wx:key="index" slot="button-slot-{{index}}">
+    <button class="button {{index == 1 && 'blue'}}">测试按钮{{index}}</button>
   </view>
-  <!-- 表格行 -->
-  <block wx:for="{{rows}}" wx:key="index">
-    <view class="row">
-      <block wx:for="{{item}}" wx:key="index">
-        <view class="cell" style="width: {{headers[index].width}}rpx;">{{item}}</view>
-      </block>
-    </view>
-  </block>
-</view>
+</MTable>
+
+<view wx:if="{{eventInfo}}">{{eventInfo}}</view>
