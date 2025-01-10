@@ -1,0 +1,34 @@
+<view class="flex-table">
+  <!-- 表头 -->
+  <view class="header">
+    <block wx:for="{{columns}}" wx:key="key">
+      <view class="cell" style="width: {{item.width ? item.width + 'rpx' : 'auto'}}"
+        >{{item.title}}</view
+      >
+    </block>
+  </view>
+  <!-- 表格行 -->
+  <block wx:for="{{dataSource}}" wx:key="index" wx:for-index="rowIndex">
+    <view class="row">
+      <block wx:for="{{columns}}" wx:key="key" wx:for-item="column">
+        <view class="cell" style="width: {{column.width ? column.width + 'rpx' : 'auto'}}">
+          <block wx:if="{{column.type === 'action'}}">
+            <block wx:for="{{column.actions}}" wx:key="name" wx:for-item="action">
+              <view
+                class="action-btn {{action.className || ''}}"
+                data-action="{{action.name}}"
+                data-index="{{rowIndex}}"
+                bindtap="handleAction"
+              >
+                {{action.text}}
+              </view>
+            </block>
+          </block>
+          <block wx:else>
+            {{item[column.key]}}
+          </block>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

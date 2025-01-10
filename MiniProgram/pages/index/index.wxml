@@ -1,16 +1,3 @@
-<view class="flex-table">
-  <!-- 表头 -->
-  <view class="header">
-    <block wx:for="{{tableColumns}}" wx:key="key">
-      <view class="cell" style="width: {{item.width ? item.width + 'rpx' : 'auto'}}">{{item.title}}</view>
-    </block>
-  </view>
-  <!-- 表格行 -->
-  <block wx:for="{{data}}" wx:key="index">
-    <view class="row">
-      <block wx:for="{{tableColumns}}" wx:for-item="column" wx:key="key">
-        <view class="cell" style="width: {{column.width ? column.width + 'rpx' : 'auto'}}">{{item[column.key]}}</view>
-      </block>
-    </view>
-  </block>
-</view>
+<MTable columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction"></MTable>
+
+<view wx:if="{{eventInfo}}">{{eventInfo}}</view>
