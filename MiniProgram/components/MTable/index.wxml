@@ -24,6 +24,14 @@
               </view>
             </block>
           </block>
+          <block wx:elif="{{column.slot}}">
+            <slot
+              name="{{column.slot}}-{{rowIndex}}"
+              value="{{item[column.key]}}"
+              record="{{item}}"
+              index="{{rowIndex}}"
+            ></slot>
+          </block>
           <block wx:else>
             {{item[column.key]}}
           </block>

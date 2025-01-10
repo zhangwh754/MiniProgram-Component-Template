@@ -1,4 +1,9 @@
 Component({
+  options: {
+    addGlobalClass: true, // 启用组件样式共享
+    multipleSlots: true, // 启用多slot支持
+  },
+
   properties: {
     columns: {
       type: Array,
