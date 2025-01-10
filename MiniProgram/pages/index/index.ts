@@ -2,7 +2,7 @@ Page({
   data: {
       // 表头数据
       headers: [
-          { text: "Header 1", width: 100 }, // width 单位为 px
+          { text: "啦啦啦头部", width: 100 }, // width 单位为 px
           { text: "Header 2", width: 300 },
           { text: "Header 3", width: 200 },
       ],

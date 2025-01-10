@@ -3,6 +3,7 @@ import { src, dest, watch } from 'gulp';
 import ts from 'gulp-typescript';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
+import rename from 'gulp-rename';
 import { deleteAsync as del } from 'del';
 import browserSync from "browser-sync";
 
@@ -17,13 +18,17 @@ const paths = {
     scripts: {
         src: 'MiniProgram/**/*.ts',
         dest: 'dist/'
-    }
+    },
+    misc: {
+        src: 'MiniProgram/**/*{.js,.wxml,.json}',
+        dest: 'dist/'
+    },
 };
 
 /*
  * For small tasks you can export arrow functions
  */
-export const clean = () => del(['dist']);
+export const clean = () => del(['dist/**/*', '!dist']);
 
 /*
  * You can also declare named functions and export them as tasks
@@ -31,6 +36,9 @@ export const clean = () => del(['dist']);
 export function styles() {
     return src(paths.styles.src)
         .pipe(sass())
+        .pipe(rename(function (path) {
+            path.extname = ".wxss"    // Change extension from .css to .wxss
+        }))
         // pass in options to the stream
         .pipe(dest(paths.styles.dest));
 }
@@ -41,9 +49,16 @@ export function scripts() {
         .pipe(dest(paths.scripts.dest));
 }
 
+export function miscs() {
+    return src(paths.misc.src)
+        .pipe(dest(paths.misc.dest));
+}
+
+
 function watchFiles() {
     watch(paths.scripts.src, scripts);
     watch(paths.styles.src, styles);
+    watch(paths.misc.src, miscs);
 }
 export { watchFiles as watch };
 
@@ -53,7 +68,7 @@ gulp.task("serve", () => {
 
 const build = gulp.series(
     clean,
-    gulp.parallel(styles, scripts),
+    gulp.parallel(styles, scripts, miscs),
     gulp.parallel(watchFiles, 'serve')
 );
 
