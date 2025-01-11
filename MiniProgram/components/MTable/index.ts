@@ -13,6 +13,17 @@ Component({
       type: Array,
       value: [],
     },
+    scroll: {
+      type: Boolean,
+      value: false,
+    },
+    scrollY: {
+      type: Boolean,
+      value: false,
+    },
+    height: {
+      type: Number,
+    },
   },
 
   methods: {
