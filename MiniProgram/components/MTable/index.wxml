@@ -2,7 +2,9 @@
   <!-- 表头 -->
   <view class="header">
     <block wx:for="{{columns}}" wx:key="key">
-      <view class="cell" style="width: {{item.width ? item.width + 'rpx' : 'auto'}}"
+      <view
+        class="cell {{scroll ? 'scroll' : ''}}"
+        style="width: {{item.width ? item.width + 'rpx' : 'auto'}}"
         >{{item.title}}</view
       >
     </block>
@@ -11,7 +13,10 @@
   <block wx:for="{{dataSource}}" wx:key="index" wx:for-index="rowIndex">
     <view class="row">
       <block wx:for="{{columns}}" wx:key="key" wx:for-item="column">
-        <view class="cell" style="width: {{column.width ? column.width + 'rpx' : 'auto'}}">
+        <view
+          class="cell {{scroll ? 'scroll' : ''}}"
+          style="width: {{column.width ? column.width + 'rpx' : 'auto'}}"
+        >
           <block wx:if="{{column.type === 'action'}}">
             <block wx:for="{{column.actions}}" wx:key="name" wx:for-item="action">
               <view
