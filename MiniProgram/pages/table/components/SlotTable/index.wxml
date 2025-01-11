@@ -2,8 +2,12 @@
 
 <MTable scroll="{{false}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
   <view wx:for="{{data}}" wx:key="index" slot="button-slot-{{index}}">
-    <button class="button {{index == 1 && 'blue'}}">测试按钮{{index}}</button>
+    <button
+      class="button {{index == 1 && 'blue'}}"
+      data-index="{{index}}"
+      bind:tap="onSlotButtonClick"
+    >
+      测试按钮{{index}}
+    </button>
   </view>
 </MTable>
-
-<view wx:if="{{eventInfo}}">{{eventInfo}}</view>

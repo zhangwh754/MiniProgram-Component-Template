@@ -17,6 +17,13 @@ Component({
       type: Boolean,
       value: false,
     },
+    scrollY: {
+      type: Boolean,
+      value: false,
+    },
+    height: {
+      type: Number,
+    },
   },
 
   methods: {
