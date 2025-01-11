@@ -19,7 +19,7 @@ Page({
       {
         title: "地址",
         key: "address",
-        width: 400,
+        width: 200,
       },
       {
         title: "公司",

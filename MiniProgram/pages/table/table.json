@@ -2,7 +2,6 @@
   "usingComponents": {
     "BasicTable": "./components/BasicTable/index",
     "ScrollXTable": "./components/ScrollXTable/index",
-    "SlotTable": "./components/SlotTable/index",
-    "ScrollYTable": "./components/ScrollYTable/index"
+    "SlotTable": "./components/SlotTable/index"
   }
 }
