@@ -4,21 +4,21 @@ Page({
       {
         title: "姓名",
         key: "name",
-        width: 300,
+        width: 200,
       },
       {
         title: "年龄",
         key: "age",
-        width: 200,
+        width: 100,
       },
       {
         title: "性别",
         key: "sex",
-        width: 200,
+        width: 100,
       },
       {
         title: "自定义渲染",
-        width: 500,
+        width: 200,
         slot: 'button-slot'
       },
       // {

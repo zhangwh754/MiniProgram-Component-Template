@@ -1,6 +1,6 @@
 <import src="../../template/msgItem.wxml" />
 
-<MTable scroll="{{false}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
+<MTable columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
   <view wx:for="{{data}}" wx:key="index" slot="button-slot-{{index}}">
     <button class="button {{index == 1 && 'blue'}}">测试按钮{{index}}</button>
   </view>

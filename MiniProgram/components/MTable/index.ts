@@ -13,10 +13,6 @@ Component({
       type: Array,
       value: [],
     },
-    scroll: {
-      type: Boolean,
-      value: false,
-    },
   },
 
   methods: {

@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "BasicTable": "./components/BasicTable/index",
-    "ScrollXTable": "./components/ScrollXTable/index",
-    "SlotTable": "./components/SlotTable/index"
-  }
-}
