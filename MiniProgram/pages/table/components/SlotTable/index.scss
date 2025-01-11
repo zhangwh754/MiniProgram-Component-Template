@@ -1,0 +1,10 @@
+.button {
+  white-space: no-wrap;
+  font-size: 24rpx;
+
+  &.blue {
+    margin: 0 8rpx;
+    border: 1rpx solid #1890ff;
+    border-radius: 8rpx;
+  }
+}
