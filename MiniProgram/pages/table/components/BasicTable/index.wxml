@@ -1,0 +1,6 @@
+<Title title="基础表格" />
+
+<MTable scroll="{{false}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
+</MTable>
+
+<view wx:if="{{eventInfo}}">{{eventInfo}}</view>
