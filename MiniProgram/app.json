@@ -1,9 +1,13 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/table/table"
   ],
   "window": {
     "navigationBarTitleText": "Demo"
+  },
+  "usingComponents": {
+    "Title": "./components/MTitle/index"
   },
   "networkTimeout": {
     "request": 10000,
