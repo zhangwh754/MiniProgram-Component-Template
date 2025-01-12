@@ -36,5 +36,14 @@ Component({
         record: this.data.dataSource[index],
       });
     },
+
+    onHeaderClick(e: TouchEventType) {
+      const { index, key } = e.target.dataset;
+
+      this.triggerEvent("headerClick", {
+        index,
+        key,
+      });
+    },
   },
 });

@@ -58,7 +58,17 @@ Page({
   },
   onLoad() {},
 
-  bindAction(e: TouchEventType) {
+  bindHeaderClick(e) {
+    const { index, key } = e.detail;
+
+    wx.showModal({
+      title: "提示",
+      showCancel: false,
+      content: `点击了第${index + 1}列的标题，key为${key}`,
+    });
+  },
+
+  bindAction(e) {
     const { action, index, record } = e.detail;
 
     this.setData({
