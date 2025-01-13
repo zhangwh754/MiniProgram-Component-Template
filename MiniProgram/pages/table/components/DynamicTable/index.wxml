@@ -1,0 +1,7 @@
+<Title title="动态表格" />
+
+<MTable scroll="{{false}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
+</MTable>
+
+<button bind:tap="onHandleAdd">onHandleAdd</button>
+<button bind:tap="onColumnChange">onColumnChange</button>
