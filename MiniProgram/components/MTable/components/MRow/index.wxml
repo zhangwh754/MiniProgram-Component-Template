@@ -1,0 +1,32 @@
+<view class="row">
+  <block wx:for="{{columns}}" wx:key="key" wx:for-item="column">
+    <view
+      class="cell {{scroll ? 'scroll' : ''}}"
+      style="width: {{column.width ? column.width + 'rpx' : 'auto'}}"
+    >
+      <block wx:if="{{column.type === 'action'}}">
+        <block wx:for="{{column.actions}}" wx:key="name" wx:for-item="action">
+          <view
+            class="action-btn {{action.className || ''}}"
+            data-action="{{action.name}}"
+            data-index="{{rowIndex}}"
+            bind:tap="handleAction"
+          >
+            {{action.text}}
+          </view>
+        </block>
+      </block>
+      <block wx:elif="{{column.slot}}">
+        <slot
+          name="{{column.slot}}-{{rowIndex}}"
+          value="{{rowData[column.key]}}"
+          record="{{rowData}}"
+          index="{{rowIndex}}"
+        ></slot>
+      </block>
+      <block wx:else>
+        {{rowData[column.key]}}
+      </block>
+    </view>
+  </block>
+</view>
