@@ -11,10 +11,10 @@
       >
     </block>
   </view>
-  <!-- 表格行 -->
 
   <block wx:if="{{scrollY}}">
     <scroll-view scroll-y="{{true}}" style="height: {{(height || 300) + 'rpx'}}">
+      <!-- 表格行 -->
       <MRow
         wx:for="{{dataSource}}"
         wx:key="index"
@@ -23,10 +23,21 @@
         columns="{{columns}}"
         scroll="{{scroll}}"
         bind:action="handleAction"
-      ></MRow>
+      >
+        <view
+          wx:for="{{columns}}"
+          wx:key="columnIndex"
+          wx:for-item="column"
+          wx:for-index="columnIndex"
+          slot="row-{{column.slot}}-{{index}}"
+        >
+          <slot wx:if="{{column.slot}}" name="{{column.slot}}-{{index}}"></slot>
+        </view>
+      </MRow>
     </scroll-view>
   </block>
   <block wx:else>
+    <!-- 表格行 -->
     <MRow
       wx:for="{{dataSource}}"
       wx:key="index"
@@ -35,6 +46,16 @@
       columns="{{columns}}"
       scroll="{{scroll}}"
       bind:action="handleAction"
-    ></MRow>
+    >
+      <view
+        wx:for="{{columns}}"
+        wx:key="columnIndex"
+        wx:for-item="column"
+        wx:for-index="columnIndex"
+        slot="row-{{column.slot}}-{{index}}"
+      >
+        <slot wx:if="{{column.slot}}" name="{{column.slot}}-{{index}}"></slot>
+      </view>
+    </MRow>
   </block>
 </view>

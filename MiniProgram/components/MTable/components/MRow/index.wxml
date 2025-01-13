@@ -17,12 +17,7 @@
         </block>
       </block>
       <block wx:elif="{{column.slot}}">
-        <slot
-          name="{{column.slot}}-{{rowIndex}}"
-          value="{{rowData[column.key]}}"
-          record="{{rowData}}"
-          index="{{rowIndex}}"
-        ></slot>
+        <slot name="row-{{column.slot}}-{{rowIndex}}"></slot>
       </block>
       <block wx:else>
         {{rowData[column.key]}}
