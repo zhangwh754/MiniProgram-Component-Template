@@ -9,34 +9,26 @@ Component({
       type: Array,
       value: [],
     },
-    dataSource: {
-      type: Array,
-      value: [],
-    },
     scroll: {
       type: Boolean,
       value: false,
     },
-    scrollY: {
-      type: Boolean,
-      value: false,
-    },
-    height: {
+    rowIndex: {
       type: Number,
+    },
+    rowData: {
+      type: Object,
     },
   },
 
   methods: {
     handleAction(e: TouchEventType) {
-      this.triggerEvent("action", e.detail);
-    },
-
-    onHeaderClick(e: TouchEventType) {
-      const { index, key } = e.target.dataset;
-
-      this.triggerEvent("headerClick", {
+      const { action, index } = e.currentTarget.dataset;
+      // 触发自定义事件，将操作类型和行数据传递给父组件
+      this.triggerEvent("action", {
+        action,
         index,
-        key,
+        record: this.data.rowData,
       });
     },
 

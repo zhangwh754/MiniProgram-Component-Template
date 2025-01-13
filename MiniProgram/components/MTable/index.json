@@ -1,5 +1,7 @@
 
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "MRow": "./components/MRow/index"
+  }
 }

@@ -1,15 +1,6 @@
-.flex-table {
-  margin: 20rpx 10rpx;
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  overflow-x: auto;
-}
-
-.header {
+.row {
   display: flex;
   width: 100%;
-  font-weight: bold;
 }
 
 .cell {
@@ -26,4 +17,19 @@
   &.scroll {
     flex-shrink: 0;
   }
+}
+
+.action-btn {
+  display: inline-block;
+  margin: 0 4rpx;
+  padding: 4rpx 4rpx;
+  font-size: 28rpx;
+}
+
+.edit-btn {
+  color: #1890ff;
+}
+
+.delete-btn {
+  color: #ff4d4f;
 }
