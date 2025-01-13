@@ -1,7 +1,11 @@
-<BasicTable />
+<view class="container">
+  <BasicTable />
 
-<ScrollXTable />
+  <ScrollXTable />
 
-<ScrollYTable />
+  <ScrollYTable />
 
-<SlotTable />
+  <SlotTable />
+
+  <DynamicTable />
+</view>
