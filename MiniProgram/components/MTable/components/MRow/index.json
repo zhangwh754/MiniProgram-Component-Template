@@ -1,5 +1,6 @@
-
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "MCheckbox": "../MCheckbox/index"
+  }
 }

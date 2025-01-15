@@ -1,7 +1,7 @@
 <view class="row">
   <view wx:if="{{checked}}" class="cell {{scroll ? 'scroll' : ''}}">
-    <view style="width: 60rpx;">
-      <view bind:tap="toggleChecked">{{isChecked ? '[√]' : '[X]'}}</view>
+    <view class="checkbox">
+      <MCheckbox checked="{{isChecked}}" bind:checked="toggleChecked" />
     </view>
   </view>
   <block wx:for="{{columns}}" wx:key="key" wx:for-item="column">

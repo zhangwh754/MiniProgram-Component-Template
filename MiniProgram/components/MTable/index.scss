@@ -27,7 +27,11 @@
     flex-shrink: 0;
   }
 
-  &.checkbox {
-    flex-shrink: 0;
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60rpx;
+    height: 100%;
   }
 }

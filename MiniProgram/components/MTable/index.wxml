@@ -2,11 +2,10 @@
   <!-- 表头 -->
   <view class="header" bind:tap="onHeaderClick">
     <view wx:if="{{checked}}" class="cell {{scroll ? 'scroll' : ''}}">
-      <view style="width: 60rpx;">
-        <view wx:if="{{checkedAll}}" bind:tap="toggleAllChecked"
-          >{{_checkedAllStatus == 'all' ? '[√]' : _checkedAllStatus == 'none' ? '[X]' :
-          '[@]'}}</view
-        >
+      <view class="checkbox">
+        <view wx:if="{{checkedAll}}">
+          <MCheckbox checkStatus="{{_checkedAllStatus}}" bind:checked="toggleAllChecked"></MCheckbox
+        ></view>
       </view>
     </view>
 

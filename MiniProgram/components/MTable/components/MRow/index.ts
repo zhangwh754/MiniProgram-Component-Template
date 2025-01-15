@@ -60,10 +60,11 @@ Component({
       });
     },
 
-    toggleChecked() {
-      const { isChecked, rowData } = this.data;
+    toggleChecked(e) {
+      const { isChecked } = e.detail;
+      const { rowData } = this.data;
 
-      if (isChecked) {
+      if (!isChecked) {
         this.setData({
           checkedIds: this.data.checkedIds.filter(
             (item) => item !== rowData.id
@@ -74,8 +75,6 @@ Component({
           checkedIds: [...this.data.checkedIds, rowData.id],
         });
       }
-
-      console.log(this.data.checkedIds);
 
       this.triggerEvent("onChecked", {
         checkedIds: this.data.checkedIds,
