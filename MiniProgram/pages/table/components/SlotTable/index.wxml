@@ -1,4 +1,4 @@
-<Title title="插槽表格" />
+<MTitle title="插槽表格" />
 
 <MTable scroll="{{false}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
   <view wx:for="{{data}}" wx:key="index" slot="button-slot-{{index}}">

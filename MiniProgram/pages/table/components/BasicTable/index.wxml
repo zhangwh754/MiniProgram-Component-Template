@@ -1,4 +1,4 @@
-<Title title="基础表格" />
+<MTitle title="基础表格" />
 
 <MTable
   scroll="{{false}}"

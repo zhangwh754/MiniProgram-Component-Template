@@ -7,7 +7,7 @@
     "navigationBarTitleText": "Demo"
   },
   "usingComponents": {
-    "Title": "./components/MTitle/index"
+    "MTitle": "./components/MTitle/index"
   },
   "networkTimeout": {
     "request": 10000,

@@ -1,4 +1,4 @@
-<Title title="带勾选的表格" />
+<MTitle title="带勾选的表格" />
 
 <MTable
   scroll="{{false}}"
