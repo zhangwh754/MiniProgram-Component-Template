@@ -4,6 +4,7 @@
     "ScrollXTable": "./components/ScrollXTable/index",
     "SlotTable": "./components/SlotTable/index",
     "ScrollYTable": "./components/ScrollYTable/index",
-    "DynamicTable": "./components/DynamicTable/index"
+    "DynamicTable": "./components/DynamicTable/index",
+    "CheckedTable": "./components/CheckedTable/index"
   }
 }

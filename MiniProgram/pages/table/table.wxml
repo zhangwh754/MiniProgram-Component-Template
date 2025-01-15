@@ -8,4 +8,6 @@
   <SlotTable />
 
   <DynamicTable />
+
+  <CheckedTable />
 </view>

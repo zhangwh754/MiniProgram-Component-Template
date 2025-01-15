@@ -13,11 +13,30 @@ Component({
       type: Boolean,
       value: false,
     },
+    checked: {
+      type: Boolean,
+      value: false,
+    },
     rowIndex: {
       type: Number,
     },
     rowData: {
       type: Object,
+    },
+    checkedIds: {
+      type: Array,
+    },
+  },
+
+  data: {
+    isChecked: false,
+  },
+
+  observers: {
+    checkedIds: function (checkedIds) {
+      this.setData({
+        isChecked: checkedIds.includes(this.data.rowData.id),
+      });
     },
   },
 
@@ -38,6 +57,27 @@ Component({
       this.triggerEvent("headerClick", {
         index,
         key,
+      });
+    },
+
+    toggleChecked(e) {
+      const { isChecked } = e.detail;
+      const { rowData } = this.data;
+
+      if (!isChecked) {
+        this.setData({
+          checkedIds: this.data.checkedIds.filter(
+            (item) => item !== rowData.id
+          ),
+        });
+      } else {
+        this.setData({
+          checkedIds: [...this.data.checkedIds, rowData.id],
+        });
+      }
+
+      this.triggerEvent("onChecked", {
+        checkedIds: this.data.checkedIds,
       });
     },
   },

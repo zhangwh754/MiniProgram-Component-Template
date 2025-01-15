@@ -1,3 +1,3 @@
-<Title title="定高/纵向滚动表格" />
+<MTitle title="定高/纵向滚动表格" />
 
 <MTable scroll-y="{{true}}" height="{{300}}" columns="{{columns}}" dataSource="{{data}}"> </MTable>
