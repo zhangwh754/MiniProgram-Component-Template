@@ -1,6 +1,15 @@
 <view class="flex-table">
   <!-- 表头 -->
   <view class="header" bind:tap="onHeaderClick">
+    <view wx:if="{{checked}}" class="cell {{scroll ? 'scroll' : ''}}">
+      <view style="width: 60rpx;">
+        <view wx:if="{{checkedAll}}" bind:tap="toggleAllChecked"
+          >{{_checkedAllStatus == 'all' ? '[√]' : _checkedAllStatus == 'none' ? '[X]' :
+          '[@]'}}</view
+        >
+      </view>
+    </view>
+
     <block wx:for="{{columns}}" wx:key="key">
       <view
         data-index="{{index}}"
@@ -22,6 +31,9 @@
         rowIndex="{{index}}"
         columns="{{columns}}"
         scroll="{{scroll}}"
+        checked="{{checked}}"
+        checkedIds="{{_checkedIds}}"
+        bind:onChecked="onChecked"
         bind:action="handleAction"
       >
         <view
@@ -45,6 +57,9 @@
       rowIndex="{{index}}"
       columns="{{columns}}"
       scroll="{{scroll}}"
+      checked="{{checked}}"
+      checkedIds="{{_checkedIds}}"
+      bind:onChecked="onChecked"
       bind:action="handleAction"
     >
       <view

@@ -1,4 +1,9 @@
 <view class="row">
+  <view wx:if="{{checked}}" class="cell {{scroll ? 'scroll' : ''}}">
+    <view style="width: 60rpx;">
+      <view bind:tap="toggleChecked">{{isChecked ? '[√]' : '[X]'}}</view>
+    </view>
+  </view>
   <block wx:for="{{columns}}" wx:key="key" wx:for-item="column">
     <view
       class="cell {{scroll ? 'scroll' : ''}}"

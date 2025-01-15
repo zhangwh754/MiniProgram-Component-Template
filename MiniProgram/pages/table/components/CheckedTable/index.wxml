@@ -1,0 +1,19 @@
+<Title title="带勾选的表格" />
+
+<MTable
+  scroll="{{false}}"
+  columns="{{columns}}"
+  dataSource="{{data}}"
+  checked="{{true}}"
+  checkedAll="{{checkedAll}}"
+  checkedIds="{{checkedIds}}"
+  bind:onChecked="onChecked"
+>
+</MTable>
+
+<view>选中的id:{{checkedIds}}</view>
+
+<label
+  >显示全选：
+  <switch checked="{{checkedAll}}" data-checked="checkedAll" bind:change="switchChange" />
+</label>
