@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title Component render: initial 1`] = `
+<main>
+  <wx-view
+    class="title"
+  >
+    你好世界
+  </wx-view>
+</main>
+`;
+
+exports[`Title Component render: updated 1`] = `
+<main>
+  <wx-view
+    class="title"
+  >
+    Hello World
+  </wx-view>
+</main>
+`;
