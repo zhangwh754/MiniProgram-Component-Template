@@ -1,16 +1,6 @@
 const path = require('path')
 const simulate = require('miniprogram-simulate')
 
-
-function sleep() {
-    // 返回一个 Promise，等待 5 秒
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve();
-        }, 300);
-    });
-}
-
 test('Title Component render', async () => {
     const title = '你好世界'
     const id = simulate.load(path.join(process.cwd(), './dist/components/MTitle/index')) // 加载自定义组件，返回组件 id
@@ -20,7 +10,7 @@ test('Title Component render', async () => {
 
     expect(container.toJSON()).toMatchSnapshot('initial')
 
-    await sleep()
+    await simulate.sleep(0)
     container.setData({ title: 'Hello World' })
     expect(container.toJSON()).toMatchSnapshot('updated');
 })
