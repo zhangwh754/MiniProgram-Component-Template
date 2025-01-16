@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Component render: base table 1`] = `
+<main>
+  <main
+    id="m-table"
+    bind:action="bindAction"
+    bind:headerClick="bindHeaderClick"
+  >
+    <wx-view
+      class="flex-table"
+    >
+      <wx-view
+        class="header"
+        bind:tap="onHeaderClick"
+      >
+        <wx-view
+          class="cell "
+          data-index="{{0}}"
+          data-key="name"
+          style="width: 300rpx"
+        >
+          姓名
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{1}}"
+          data-key="age"
+          style="width: 200rpx"
+        >
+          年龄
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{2}}"
+          data-key="sex"
+          style="width: 200rpx"
+        >
+          性别
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{3}}"
+          data-key="action"
+          style="width: 300rpx"
+        >
+          操作
+        </wx-view>
+      </wx-view>
+      <MRow
+        bind:action="handleAction"
+        bind:onChecked="onChecked"
+      >
+        <wx-view
+          class="row"
+        >
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            
+        张三
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        18
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        男
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            <wx-view
+              class="action-btn edit-btn"
+              data-action="edit"
+              data-index="{{0}}"
+              bind:tap="handleAction"
+            >
+              
+            编辑
+          
+            </wx-view>
+            <wx-view
+              class="action-btn delete-btn"
+              data-action="delete"
+              data-index="{{0}}"
+              bind:tap="handleAction"
+            >
+              
+            删除
+          
+            </wx-view>
+          </wx-view>
+        </wx-view>
+      </MRow>
+      <MRow
+        bind:action="handleAction"
+        bind:onChecked="onChecked"
+      >
+        <wx-view
+          class="row"
+        >
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            
+        李四
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        20
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        女
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            <wx-view
+              class="action-btn edit-btn"
+              data-action="edit"
+              data-index="{{1}}"
+              bind:tap="handleAction"
+            >
+              
+            编辑
+          
+            </wx-view>
+            <wx-view
+              class="action-btn delete-btn"
+              data-action="delete"
+              data-index="{{1}}"
+              bind:tap="handleAction"
+            >
+              
+            删除
+          
+            </wx-view>
+          </wx-view>
+        </wx-view>
+      </MRow>
+      <MRow
+        bind:action="handleAction"
+        bind:onChecked="onChecked"
+      >
+        <wx-view
+          class="row"
+        >
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            
+        王五
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        25
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        男
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            <wx-view
+              class="action-btn edit-btn"
+              data-action="edit"
+              data-index="{{2}}"
+              bind:tap="handleAction"
+            >
+              
+            编辑
+          
+            </wx-view>
+            <wx-view
+              class="action-btn delete-btn"
+              data-action="delete"
+              data-index="{{2}}"
+              bind:tap="handleAction"
+            >
+              
+            删除
+          
+            </wx-view>
+          </wx-view>
+        </wx-view>
+      </MRow>
+    </wx-view>
+  </main>
+</main>
+`;
+
+exports[`Table Component render: table after data change 1`] = `
+<main>
+  <main
+    id="m-table"
+    bind:action="bindAction"
+    bind:headerClick="bindHeaderClick"
+  >
+    <wx-view
+      class="flex-table"
+    >
+      <wx-view
+        class="header"
+        bind:tap="onHeaderClick"
+      >
+        <wx-view
+          class="cell "
+          data-index="{{0}}"
+          data-key="name"
+          style="width: 300rpx"
+        >
+          姓名
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{1}}"
+          data-key="age"
+          style="width: 200rpx"
+        >
+          年龄
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{2}}"
+          data-key="sex"
+          style="width: 200rpx"
+        >
+          性别
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{3}}"
+          data-key="action"
+          style="width: 300rpx"
+        >
+          操作
+        </wx-view>
+      </wx-view>
+      <MRow
+        bind:action="handleAction"
+        bind:onChecked="onChecked"
+      >
+        <wx-view
+          class="row"
+        >
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            
+        罗伯特
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        30
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        男
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            <wx-view
+              class="action-btn edit-btn"
+              data-action="edit"
+              data-index="{{0}}"
+              bind:tap="handleAction"
+            >
+              
+            编辑
+          
+            </wx-view>
+            <wx-view
+              class="action-btn delete-btn"
+              data-action="delete"
+              data-index="{{0}}"
+              bind:tap="handleAction"
+            >
+              
+            删除
+          
+            </wx-view>
+          </wx-view>
+        </wx-view>
+      </MRow>
+    </wx-view>
+  </main>
+</main>
+`;
