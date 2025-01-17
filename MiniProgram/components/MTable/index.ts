@@ -36,6 +36,15 @@ Component({
       type: Array,
       value: [],
     },
+
+    headerClassName: {
+      type: String,
+      value: ''
+    },
+    rowClassName: {
+      type: String,
+      value: ''
+    }
   },
 
   data: {

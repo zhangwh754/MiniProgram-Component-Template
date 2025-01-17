@@ -1,0 +1,67 @@
+.button {
+  white-space: no-wrap;
+  font-size: 24rpx;
+
+  &.blue {
+    margin: 0 8rpx;
+    border: 1rpx solid #1890ff;
+    border-radius: 8rpx;
+  }
+}
+
+.header-class {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  .cell:nth-of-type(2) {
+    background-color: red;
+    font-weight: 900;
+    font-size: 1.8em;
+  }
+}
+
+.row-class {
+  &:nth-of-type(2n) {
+    background-color: lightblue;
+  }
+
+  .cell:nth-of-type(2) {
+    background-color: yellow;
+  }
+
+  &:nth-of-type(2) {
+    .cell:nth-of-type(2) {
+      position: relative;
+      font-weight: bold;
+      color: red;
+      border-color: #000;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -1rpx;
+        left: -1rpx;
+        bottom: 0;
+        right: 0;
+        border-top: 1rpx solid #000;
+        border-left: 1rpx solid #000;
+      }
+    }
+  }
+}
+
+// 无关css
+.tip-container {
+  display: flex;
+  align-items: center;
+
+  .tip-button {
+    margin: 0;
+    height: 60rpx;
+    padding: 0 12rpx;
+    line-height: 60rpx;
+  }
+}

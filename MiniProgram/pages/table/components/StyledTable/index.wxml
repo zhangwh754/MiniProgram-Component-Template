@@ -1,0 +1,14 @@
+<view class="tip-container">
+  <MTitle title="自定义样式表格" />
+  <button class="tip-button" bind:tap="toggleTipsShow">{{tipShow ? '隐藏' : '显示'}}提示</button>
+</view>
+
+<block wx:if="{{tipShow}}">
+  <view style="margin: 12rpx">
+    1. 如果不对MTable做二次封装，则正常在Page的wxss设置类名传入headerClassName和rowClassName，不会污染全局的样式。
+  </view>
+  <view style="margin: 12rpx">
+    2. 如果要对MTable做二次封装，则要参考StyledTable/index.ts，把这个组件的"styleIsolation"设置为"shared"，然后要自行避免在自定义表格组件中写到会污染全局样式的类名
+  </view>
+</block>
+<MTable headerClassName="header-class" rowClassName="row-class" columns="{{columns}}" dataSource="{{data}}"></MTable>

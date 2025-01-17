@@ -1,6 +1,6 @@
 <view class="flex-table">
   <!-- 表头 -->
-  <view class="header" bind:tap="onHeaderClick">
+  <view class="header {{headerClassName}}" bind:tap="onHeaderClick">
     <view wx:if="{{checked}}" class="cell {{scroll ? 'scroll' : ''}}">
       <view class="checkbox">
         <view wx:if="{{checkedAll}}">
@@ -24,6 +24,7 @@
     <scroll-view scroll-y="{{true}}" style="height: {{(height || 300) + 'rpx'}}">
       <!-- 表格行 -->
       <MRow
+        class="{{rowClassName}}"
         wx:for="{{dataSource}}"
         wx:key="index"
         rowData="{{item}}"
@@ -50,6 +51,7 @@
   <block wx:else>
     <!-- 表格行 -->
     <MRow
+      class="{{rowClassName}}"
       wx:for="{{dataSource}}"
       wx:key="index"
       rowData="{{item}}"

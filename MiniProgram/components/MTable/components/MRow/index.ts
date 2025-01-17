@@ -26,6 +26,9 @@ Component({
     checkedIds: {
       type: Array,
     },
+    rowClassName: {
+      type: String
+    }
   },
 
   data: {

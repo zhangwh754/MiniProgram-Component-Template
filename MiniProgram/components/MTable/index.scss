@@ -4,6 +4,8 @@
   flex-direction: column;
   width: auto;
   overflow-x: auto;
+  border-top: 1rpx solid #ccc;
+  border-left: 1rpx solid #ccc;
 }
 
 .header {
@@ -14,7 +16,6 @@
 
 .cell {
   flex-grow: 1;
-  border: 1rpx solid #ccc;
   padding: 20rpx;
   box-sizing: border-box;
   text-align: center;
@@ -22,6 +23,8 @@
   align-items: center;
   justify-content: center;
   word-break: break-all;
+  border-right: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
 
   &.scroll {
     flex-shrink: 0;
