@@ -11,7 +11,7 @@ exports[`Table Component render: base table 1`] = `
       class="flex-table"
     >
       <wx-view
-        class="header"
+        class="header "
         bind:tap="onHeaderClick"
       >
         <wx-view
@@ -48,6 +48,7 @@ exports[`Table Component render: base table 1`] = `
         </wx-view>
       </wx-view>
       <MRow
+        class=""
         bind:action="handleAction"
         bind:onChecked="onChecked"
       >
@@ -106,6 +107,7 @@ exports[`Table Component render: base table 1`] = `
         </wx-view>
       </MRow>
       <MRow
+        class=""
         bind:action="handleAction"
         bind:onChecked="onChecked"
       >
@@ -164,6 +166,7 @@ exports[`Table Component render: base table 1`] = `
         </wx-view>
       </MRow>
       <MRow
+        class=""
         bind:action="handleAction"
         bind:onChecked="onChecked"
       >
@@ -237,7 +240,7 @@ exports[`Table Component render: table after data change 1`] = `
       class="flex-table"
     >
       <wx-view
-        class="header"
+        class="header "
         bind:tap="onHeaderClick"
       >
         <wx-view
@@ -274,6 +277,7 @@ exports[`Table Component render: table after data change 1`] = `
         </wx-view>
       </wx-view>
       <MRow
+        class=""
         bind:action="handleAction"
         bind:onChecked="onChecked"
       >
