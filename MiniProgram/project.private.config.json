@@ -8,6 +8,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "弹窗组件",
+          "pathName": "pages/dialog/dialog",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "表格组件",
           "pathName": "pages/table/table",
           "query": "",
