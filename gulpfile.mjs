@@ -63,7 +63,7 @@ function watchFiles() {
 export { watchFiles as watch };
 
 gulp.task("serve", () => {
-    browserSync.init();
+    browserSync.init({ server: './', open: false, notify: false });
 });
 
 const build = gulp.series(
