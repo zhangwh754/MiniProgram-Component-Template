@@ -1,0 +1,2 @@
+<MStepProgress steps="{{steps}}" primaryColor="#1677FF" activeIndex="{{2}}" useIndex="{{true}}" bind:stepItemClick="onStepItemClick" />
+<MStepProgress steps="{{steps}}" primaryColor="green" activeIndex="{{1}}" useIndex="{{false}}" />

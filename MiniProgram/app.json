@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/table/table"
+    "pages/table/table",
+    "pages/stepProgress/stepProgress"
   ],
   "window": {
     "navigationBarTitleText": "Demo"

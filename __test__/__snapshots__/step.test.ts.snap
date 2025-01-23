@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MStepProgress renders basic step progress with default props 1`] = `
+<main>
+  <main>
+    <wx-view
+      class="m-step-progress horizontal"
+      style="--primary-color: #1677FF;--second-color: #ccc"
+    >
+      <wx-view
+        class="step-item completed"
+        data-index="{{0}}"
+        data-item="{{
+          {
+            "label": "Step 1",
+            "timestamp": "2024-03-20 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="icon-check"
+          >
+            ✓
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 1
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-20 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+      <wx-view
+        class="step-item "
+        data-index="{{1}}"
+        data-item="{{
+          {
+            "label": "Step 2",
+            "timestamp": "2024-03-21 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="step-number"
+          >
+            2
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 2
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-21 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+      <wx-view
+        class="step-item "
+        data-index="{{2}}"
+        data-item="{{
+          {
+            "label": "Step 3",
+            "timestamp": "2024-03-22 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="step-number"
+          >
+            3
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 3
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-22 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+    </wx-view>
+  </main>
+</main>
+`;
+
+exports[`MStepProgress renders with active index and useIndex 1`] = `
+<main>
+  <main>
+    <wx-view
+      class="m-step-progress horizontal"
+      style="--primary-color: #1677FF;--second-color: #ccc"
+    >
+      <wx-view
+        class="step-item completed"
+        data-index="{{0}}"
+        data-item="{{
+          {
+            "label": "Step 1",
+            "timestamp": "2024-03-20 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="step-number"
+          >
+            1
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 1
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-20 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+      <wx-view
+        class="step-item completed"
+        data-index="{{1}}"
+        data-item="{{
+          {
+            "label": "Step 2",
+            "timestamp": "2024-03-21 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="step-number"
+          >
+            2
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 2
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-21 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+      <wx-view
+        class="step-item "
+        data-index="{{2}}"
+        data-item="{{
+          {
+            "label": "Step 3",
+            "timestamp": "2024-03-22 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="step-number"
+          >
+            3
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 3
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-22 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+    </wx-view>
+  </main>
+</main>
+`;
+
+exports[`MStepProgress renders with custom colors 1`] = `
+<main>
+  <main>
+    <wx-view
+      class="m-step-progress horizontal"
+      style="--primary-color: #ff0000;--second-color: #dddddd"
+    >
+      <wx-view
+        class="step-item completed"
+        data-index="{{0}}"
+        data-item="{{
+          {
+            "label": "Step 1",
+            "timestamp": "2024-03-20 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="icon-check"
+          >
+            ✓
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 1
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-20 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+      <wx-view
+        class="step-item "
+        data-index="{{1}}"
+        data-item="{{
+          {
+            "label": "Step 2",
+            "timestamp": "2024-03-21 10:00",
+          }
+        }}"
+        bind:tap="onStepItemClick"
+      >
+        <wx-view
+          class="step-circle"
+        >
+          <wx-view
+            class="step-number"
+          >
+            2
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-content"
+        >
+          <wx-view
+            class="step-label"
+          >
+            Step 2
+          </wx-view>
+          <wx-view
+            class="step-timestamp"
+          >
+            2024-03-21 10:00
+          </wx-view>
+        </wx-view>
+        <wx-view
+          class="step-connector"
+        />
+      </wx-view>
+    </wx-view>
+  </main>
+</main>
+`;
