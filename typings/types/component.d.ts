@@ -1,7 +1,7 @@
-interface TouchEventType extends WechatMiniprogram.TouchEvent {
-  currentTarget: {
-    dataset: {
-      [key: string]: any;
-    };
-  };
+declare global {
+  const Page: WechatMiniprogram.Page.Constructor;
+
+  type TouchEventType = WechatMiniprogram.TouchEvent
 }
+
+export {}
