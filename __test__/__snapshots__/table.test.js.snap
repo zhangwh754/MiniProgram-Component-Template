@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Table Component render: base table 1`] = `
+exports[`table 基础表格渲染: 基础表格 1`] = `
 <main>
   <main
     id="m-table"
@@ -229,7 +229,7 @@ exports[`Table Component render: base table 1`] = `
 </main>
 `;
 
-exports[`Table Component render: table after data change 1`] = `
+exports[`table 基础表格渲染: 数据变化后的基础表格 1`] = `
 <main>
   <main
     id="m-table"
@@ -331,6 +331,218 @@ exports[`Table Component render: table after data change 1`] = `
               
             删除
           
+            </wx-view>
+          </wx-view>
+        </wx-view>
+      </MRow>
+    </wx-view>
+  </main>
+</main>
+`;
+
+exports[`table 表格中的动态插槽列渲染: 渲染的插槽表格 1`] = `
+<main>
+  <main
+    bind:action="bindAction"
+  >
+    <wx-view
+      class="flex-table"
+    >
+      <wx-view
+        class="header "
+        bind:tap="onHeaderClick"
+      >
+        <wx-view
+          class="cell "
+          data-index="{{0}}"
+          data-key="name"
+          style="width: 300rpx"
+        >
+          姓名
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{1}}"
+          data-key="age"
+          style="width: 200rpx"
+        >
+          年龄
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{2}}"
+          data-key="sex"
+          style="width: 200rpx"
+        >
+          性别
+        </wx-view>
+        <wx-view
+          class="cell "
+          data-index="{{3}}"
+          data-key=""
+          style="width: 500rpx"
+        >
+          自定义渲染
+        </wx-view>
+      </wx-view>
+      <MRow
+        class=""
+        bind:action="handleAction"
+        bind:onChecked="onChecked"
+      >
+        <wx-view
+          class="row"
+        >
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            
+        张三
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        18
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        男
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 500rpx"
+          >
+            <wx-view
+              slot="row-button-slot-0"
+            >
+              <wx-view
+                slot="button-slot-0"
+              >
+                <wx-button
+                  class="button false"
+                  data-index="{{0}}"
+                  bind:tap="onSlotButtonClick"
+                >
+                  测试按钮1
+                </wx-button>
+              </wx-view>
+            </wx-view>
+          </wx-view>
+        </wx-view>
+      </MRow>
+      <MRow
+        class=""
+        bind:action="handleAction"
+        bind:onChecked="onChecked"
+      >
+        <wx-view
+          class="row"
+        >
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            
+        李四
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        20
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        女
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 500rpx"
+          >
+            <wx-view
+              slot="row-button-slot-1"
+            >
+              <wx-view
+                slot="button-slot-1"
+              >
+                <wx-button
+                  class="button blue"
+                  data-index="{{1}}"
+                  bind:tap="onSlotButtonClick"
+                >
+                  测试按钮2
+                </wx-button>
+              </wx-view>
+            </wx-view>
+          </wx-view>
+        </wx-view>
+      </MRow>
+      <MRow
+        class=""
+        bind:action="handleAction"
+        bind:onChecked="onChecked"
+      >
+        <wx-view
+          class="row"
+        >
+          <wx-view
+            class="cell "
+            style="width: 300rpx"
+          >
+            
+        王五
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        25
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 200rpx"
+          >
+            
+        男
+      
+          </wx-view>
+          <wx-view
+            class="cell "
+            style="width: 500rpx"
+          >
+            <wx-view
+              slot="row-button-slot-2"
+            >
+              <wx-view
+                slot="button-slot-2"
+              >
+                <wx-button
+                  class="button false"
+                  data-index="{{2}}"
+                  bind:tap="onSlotButtonClick"
+                >
+                  测试按钮3
+                </wx-button>
+              </wx-view>
             </wx-view>
           </wx-view>
         </wx-view>
