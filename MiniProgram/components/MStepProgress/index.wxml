@@ -1,0 +1,23 @@
+<view class="m-step-progress {{direction}}" style="--primary-color: {{primaryColor}};--second-color: {{secondColor}}">
+    <block wx:for="{{steps}}" wx:key="index">
+        <!-- Step Item -->
+        <view class="step-item {{index <= activeIndex ? 'completed' : ''}}" data-index="{{index}}" data-item="{{item}}" bind:tap="onStepItemClick">
+            <!-- Step Circle -->
+            <view class="step-circle">
+                <block wx:if="{{useIndex}}">
+                    <view class="step-number">{{index + 1}}</view>
+                </block>
+                <block wx:else>
+                    <view wx:if="{{index <= activeIndex}}" class="icon-check">✓</view>
+                    <view wx:else class="step-number">{{index + 1}}</view>
+                </block>
+            </view>
+            <!-- Step Content -->
+            <view class="step-content">
+                <view class="step-label">{{item.label}}</view>
+                <view class="step-timestamp">{{item.timestamp || 'item.timestamp'}}</view>
+            </view>
+            <view class="step-connector"></view>
+        </view>
+    </block>
+</view>

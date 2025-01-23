@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "MStepProgress": "../../components/MStepProgress/index"
+  }
+}

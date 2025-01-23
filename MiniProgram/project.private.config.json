@@ -8,6 +8,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "步骤时间轴",
+          "pathName": "pages/stepProgress/stepProgress",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "表格组件",
           "pathName": "pages/table/table",
           "query": "",
