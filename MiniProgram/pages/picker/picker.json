@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "MPicker": "../../components/MPicker/index",
+    "MSelect": "../../components/MSelect/index"
+  }
+}

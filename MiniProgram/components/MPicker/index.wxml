@@ -1,0 +1,6 @@
+<view class="picker">
+    <view class="desc">{{desc}}</view>
+    <view class="choose-view">
+        <view class="choose">{{value}}</view>
+    </view>
+</view>

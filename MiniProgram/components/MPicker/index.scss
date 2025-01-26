@@ -1,0 +1,32 @@
+.picker {
+    display: flex;
+    align-items: center;
+
+    .desc {
+        font-weight: 400;
+        font-size: 26rpx;
+        color: #969ca8;
+    }
+
+    .choose-view {
+        box-sizing: border-box;
+        margin-left: 23rpx;
+        padding-left: 16rpx;
+        padding-right: 36rpx;
+        height: 48rpx;
+        min-width: 123rpx;
+        line-height: 48rpx;
+        background-color: #fff;
+        background: no-repeat url("https://pic1.imgdb.cn/item/6795a6dbd0e0a243d4f80267.png");
+        background-size: 17.4rpx 15rpx;
+        background-position: right 12.3rpx center;
+        border: 1rpx solid #969ca8;
+        border-radius: 4rpx;
+
+        .choose {
+            font-weight: 400;
+            font-size: 26rpx;
+            color: #666;
+        }
+    }
+}

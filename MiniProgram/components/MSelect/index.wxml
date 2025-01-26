@@ -1,0 +1,3 @@
+<picker value="{{pickerIndex}}" range="{{options}}" range-key="label" bindchange="onPickerChange">
+    <display desc="{{desc}}" value="{{showValue}}"></display>
+</picker>

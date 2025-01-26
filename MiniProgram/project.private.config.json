@@ -8,6 +8,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "XX选择",
+          "pathName": "pages/picker/picker",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "步骤时间轴",
           "pathName": "pages/stepProgress/stepProgress",
           "query": "",

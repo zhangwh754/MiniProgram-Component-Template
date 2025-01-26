@@ -1,0 +1,2 @@
+<!-- <MPicker class="picker" desc="日期选择" value="2025-01-26"></MPicker> -->
+<MSelect class="picker" model:value="{{pickerValue}}" options="{{pickerOptions}}" desc="类型选择"></MSelect>
