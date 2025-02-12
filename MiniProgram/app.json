@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/table/table",
     "pages/stepProgress/stepProgress",
-    "pages/picker/picker"
+    "pages/picker/picker",
+    "pages/dialog/dialog"
   ],
   "window": {
     "navigationBarTitleText": "Demo"

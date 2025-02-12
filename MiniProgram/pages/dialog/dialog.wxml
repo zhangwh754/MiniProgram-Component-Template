@@ -1,0 +1,12 @@
+<!--pages/dialog/dialog.wxml-->
+<view class="container">
+  <view>Hello World</view>
+
+  <MDialog show="{{show}}" maskStyle="background: rgba(0,0,0,.4)" bind:update:show="onUpdateShow">
+    <view class="content">
+      <view wx:for="{{10}}">dialog {{item}}</view>
+    </view>
+  </MDialog>
+</view>
+
+<button data-show="{{true}}" bind:tap="onUpdateShow">toggleDialogShow</button>
