@@ -4,8 +4,16 @@
   flex-direction: column;
   width: auto;
   overflow-x: auto;
-  border-top: 1rpx solid #ccc;
-  border-left: 1rpx solid #ccc;
+
+  &.border {
+    border-top: 1rpx solid #ccc;
+    border-left: 1rpx solid #ccc;
+
+    .cell {
+      border-right: 1rpx solid #ccc;
+      border-bottom: 1rpx solid #ccc;
+    }
+  }
 }
 
 .header {
@@ -23,8 +31,6 @@
   align-items: center;
   justify-content: center;
   word-break: break-all;
-  border-right: 1rpx solid #ccc;
-  border-bottom: 1rpx solid #ccc;
 
   &.scroll {
     flex-shrink: 0;

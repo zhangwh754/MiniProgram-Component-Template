@@ -39,12 +39,16 @@ Component({
 
     headerClassName: {
       type: String,
-      value: ''
+      value: "",
     },
     rowClassName: {
       type: String,
-      value: ''
-    }
+      value: "",
+    },
+    border: {
+      type: Boolean,
+      value: true,
+    },
   },
 
   data: {

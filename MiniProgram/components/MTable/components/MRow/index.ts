@@ -27,8 +27,12 @@ Component({
       type: Array,
     },
     rowClassName: {
-      type: String
-    }
+      type: String,
+    },
+    border: {
+      type: Boolean,
+      value: true,
+    },
   },
 
   data: {

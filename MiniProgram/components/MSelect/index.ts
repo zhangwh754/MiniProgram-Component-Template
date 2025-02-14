@@ -6,61 +6,75 @@ Component({
   properties: {
     value: {
       type: String,
-      optionalTypes: [Number]
+      optionalTypes: [Number],
     },
     options: {
-      type: Array
+      type: Array,
     },
     labelKey: {
       type: String,
-      value: 'label'
+      value: "label",
     },
     valueKey: {
       type: String,
-      value: 'value'
+      value: "value",
     },
 
     desc: {
       type: String,
     },
+    placeholder: String,
   },
 
   data: {
     pickerIndex: -1,
-    showValue: ''
+    showValue: "",
   },
 
   observers: {
     value: function (newVal) {
-      const { labelKey, valueKey, options } = this.data
+      const { labelKey, valueKey, options } = this.data;
 
-      const newPickerIndex = options.findIndex(item => item[valueKey] === newVal)
-      const newLabel = options[newPickerIndex][labelKey]
+      const newPickerIndex = options.findIndex(
+        (item) => item[valueKey] === newVal
+      );
+
+      if (newPickerIndex === -1) {
+        this.setData({
+          pickerIndex: 0,
+          showValue: "",
+        });
+
+        return;
+      }
+
+      const newLabel = options[newPickerIndex][labelKey];
 
       this.setData({
         pickerIndex: newPickerIndex,
-        showValue: newLabel
-      })
-    }
+        showValue: newLabel,
+      });
+    },
   },
 
   methods: {
     onPickerChange(e: TouchEventType) {
-      const currentIndex = Number(e.detail.value)
+      const currentIndex = Number(e.detail.value);
 
-      this.echo(currentIndex)
+      this.echo(currentIndex);
     },
 
     echo(index: number) {
-      const { labelKey, valueKey, options } = this.data
+      const { labelKey, valueKey, options } = this.data;
 
-      const newLabel = options[index][labelKey]
-      const newValue = options[index][valueKey]
+      const newLabel = options[index][labelKey];
+      const newValue = options[index][valueKey];
 
       this.setData({
-        value: newValue,
-        showValue: newLabel
-      })
-    }
-  }
+        showValue: newLabel,
+      });
+
+      this.triggerEvent("update:value", newValue);
+    },
+  },
 });

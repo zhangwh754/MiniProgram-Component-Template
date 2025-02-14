@@ -11,7 +11,7 @@ Page({
             },
             {
                 label: '投资测算',
-                timestamp: '2024-03-22 15:23',
+                timestamp: '',
             },
         ]
     },

@@ -1,4 +1,4 @@
-<view class="flex-table">
+<view class="flex-table {{border ? 'border' : ''}}">
   <!-- 表头 -->
   <view class="header {{headerClassName}}" bind:tap="onHeaderClick">
     <view wx:if="{{checked}}" class="cell {{scroll ? 'scroll' : ''}}">
@@ -33,6 +33,7 @@
         scroll="{{scroll}}"
         checked="{{checked}}"
         checkedIds="{{_checkedIds}}"
+        border="{{border}}"
         bind:onChecked="onChecked"
         bind:action="handleAction"
       >
@@ -60,6 +61,7 @@
       scroll="{{scroll}}"
       checked="{{checked}}"
       checkedIds="{{_checkedIds}}"
+      border="{{border}}"
       bind:onChecked="onChecked"
       bind:action="handleAction"
     >

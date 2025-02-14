@@ -8,7 +8,7 @@ exports[`table 基础表格渲染: 基础表格 1`] = `
     bind:headerClick="bindHeaderClick"
   >
     <wx-view
-      class="flex-table"
+      class="flex-table border"
     >
       <wx-view
         class="header "
@@ -53,7 +53,7 @@ exports[`table 基础表格渲染: 基础表格 1`] = `
         bind:onChecked="onChecked"
       >
         <wx-view
-          class="row"
+          class="row border"
         >
           <wx-view
             class="cell "
@@ -112,7 +112,7 @@ exports[`table 基础表格渲染: 基础表格 1`] = `
         bind:onChecked="onChecked"
       >
         <wx-view
-          class="row"
+          class="row border"
         >
           <wx-view
             class="cell "
@@ -171,7 +171,7 @@ exports[`table 基础表格渲染: 基础表格 1`] = `
         bind:onChecked="onChecked"
       >
         <wx-view
-          class="row"
+          class="row border"
         >
           <wx-view
             class="cell "
@@ -237,7 +237,7 @@ exports[`table 基础表格渲染: 数据变化后的基础表格 1`] = `
     bind:headerClick="bindHeaderClick"
   >
     <wx-view
-      class="flex-table"
+      class="flex-table border"
     >
       <wx-view
         class="header "
@@ -282,7 +282,7 @@ exports[`table 基础表格渲染: 数据变化后的基础表格 1`] = `
         bind:onChecked="onChecked"
       >
         <wx-view
-          class="row"
+          class="row border"
         >
           <wx-view
             class="cell "
@@ -346,7 +346,7 @@ exports[`table 表格中的动态插槽列渲染: 渲染的插槽表格 1`] = `
     bind:action="bindAction"
   >
     <wx-view
-      class="flex-table"
+      class="flex-table border"
     >
       <wx-view
         class="header "
@@ -391,7 +391,7 @@ exports[`table 表格中的动态插槽列渲染: 渲染的插槽表格 1`] = `
         bind:onChecked="onChecked"
       >
         <wx-view
-          class="row"
+          class="row border"
         >
           <wx-view
             class="cell "
@@ -445,7 +445,7 @@ exports[`table 表格中的动态插槽列渲染: 渲染的插槽表格 1`] = `
         bind:onChecked="onChecked"
       >
         <wx-view
-          class="row"
+          class="row border"
         >
           <wx-view
             class="cell "
@@ -499,7 +499,7 @@ exports[`table 表格中的动态插槽列渲染: 渲染的插槽表格 1`] = `
         bind:onChecked="onChecked"
       >
         <wx-view
-          class="row"
+          class="row border"
         >
           <wx-view
             class="cell "

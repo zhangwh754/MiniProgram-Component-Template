@@ -11,6 +11,7 @@
 | columns    | 表格列的配置描述                      | Column[] | []     |
 | dataSource | 数据数组                              | object[] | []     |
 | scroll     | 是否可滚动                            | boolean  | false  |
+| border     | 是否有边框                            | boolean  | true  |
 | height     | 滚动区域高度（单位rpx）（scroll 为 true 时生效） | number   | 300    |
 
 ### Column

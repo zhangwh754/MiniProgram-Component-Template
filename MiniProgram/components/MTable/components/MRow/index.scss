@@ -1,6 +1,13 @@
 .row {
   display: flex;
   width: 100%;
+
+  &.border {
+    .cell {
+      border-right: 1rpx solid #ccc;
+      border-bottom: 1rpx solid #ccc;
+    }
+  }
 }
 
 .cell {
@@ -12,8 +19,6 @@
   align-items: center;
   justify-content: center;
   word-break: break-all;
-  border-right: 1rpx solid #ccc;
-  border-bottom: 1rpx solid #ccc;
 
   &.scroll {
     flex-shrink: 0;

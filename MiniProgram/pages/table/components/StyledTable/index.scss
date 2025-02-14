@@ -39,16 +39,16 @@
       color: red;
       border-color: #000;
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: -1rpx;
-        left: -1rpx;
-        bottom: 0;
-        right: 0;
-        border-top: 1rpx solid #000;
-        border-left: 1rpx solid #000;
-      }
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   top: -1rpx;
+      //   left: -1rpx;
+      //   bottom: 0;
+      //   right: 0;
+      //   border-top: 1rpx solid #000;
+      //   border-left: 1rpx solid #000;
+      // }
     }
   }
 }
