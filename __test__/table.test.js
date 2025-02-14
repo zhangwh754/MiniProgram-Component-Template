@@ -30,7 +30,7 @@ describe('table', () => {
 
         const wrapper = simulate.render(simulate.load({
             usingComponents: { 'MTable': table },
-            template: `<MTable id="m-table" columns="{{columns}}" dataSource="{{dataSource}}" bind:headerClick="bindHeaderClick" bind:action="bindAction"></MTable>`,
+            template: `<MTable id="m-table" columns="{{columns}}" columnKey="key" columnLabel="title" dataSource="{{dataSource}}" bind:headerClick="bindHeaderClick" bind:action="bindAction"></MTable>`,
             data: {
                 columns: [
                     {
@@ -124,7 +124,7 @@ describe('table', () => {
                 'MTable': table,
             },
             template: `
-            <MTable scroll="{{false}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
+            <MTable scroll="{{false}}" columns="{{columns}}" columnKey="key" columnLabel="title" dataSource="{{data}}" bind:action="bindAction">
                 <view wx:for="{{data}}" wx:key="index" slot="button-slot-{{index}}">
                     <button
                         class="button {{index == 1 && 'blue'}}"
