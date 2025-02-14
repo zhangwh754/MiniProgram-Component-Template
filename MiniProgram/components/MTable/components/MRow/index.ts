@@ -17,6 +17,9 @@ Component({
       type: Boolean,
       value: false,
     },
+    columnKey: {
+      type: String,
+    },
     rowIndex: {
       type: Number,
     },

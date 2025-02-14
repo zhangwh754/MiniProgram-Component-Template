@@ -1,6 +1,13 @@
 <MTitle title="插槽表格" />
 
-<MTable scroll="{{false}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction">
+<MTable
+  scroll="{{false}}"
+  columnKey="key"
+  columnLabel="title"
+  columns="{{columns}}"
+  dataSource="{{data}}"
+  bind:action="bindAction"
+>
   <view wx:for="{{data}}" wx:key="index" slot="button-slot-{{index}}">
     <button
       class="button {{index == 1 && 'blue'}}"

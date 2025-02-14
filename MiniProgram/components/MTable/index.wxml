@@ -9,13 +9,13 @@
       </view>
     </view>
 
-    <block wx:for="{{columns}}" wx:key="key">
+    <block wx:for="{{_columns}}" wx:key="__rowId">
       <view
         data-index="{{index}}"
         data-key="{{item.key}}"
         class="cell {{scroll ? 'scroll' : ''}}"
         style="width: {{item.width ? item.width + 'rpx' : 'auto'}}"
-        >{{item.title}}</view
+        >{{item[columnLabel]}}</view
       >
     </block>
   </view>
@@ -26,10 +26,11 @@
       <MRow
         class="{{rowClassName}}"
         wx:for="{{dataSource}}"
-        wx:key="index"
+        wx:key="__rowId"
+        columnKey="{{columnKey}}"
         rowData="{{item}}"
         rowIndex="{{index}}"
-        columns="{{columns}}"
+        columns="{{_columns}}"
         scroll="{{scroll}}"
         checked="{{checked}}"
         checkedIds="{{_checkedIds}}"
@@ -38,7 +39,7 @@
         bind:action="handleAction"
       >
         <view
-          wx:for="{{columns}}"
+          wx:for="{{_columns}}"
           wx:key="columnIndex"
           wx:for-item="column"
           wx:for-index="columnIndex"
@@ -54,10 +55,11 @@
     <MRow
       class="{{rowClassName}}"
       wx:for="{{dataSource}}"
-      wx:key="index"
+      wx:key="__rowId"
+      columnKey="{{columnKey}}"
       rowData="{{item}}"
       rowIndex="{{index}}"
-      columns="{{columns}}"
+      columns="{{_columns}}"
       scroll="{{scroll}}"
       checked="{{checked}}"
       checkedIds="{{_checkedIds}}"
@@ -66,7 +68,7 @@
       bind:action="handleAction"
     >
       <view
-        wx:for="{{columns}}"
+        wx:for="{{_columns}}"
         wx:key="columnIndex"
         wx:for-item="column"
         wx:for-index="columnIndex"

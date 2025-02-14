@@ -2,6 +2,8 @@
 
 <MTable
   scroll="{{false}}"
+  columnKey="key"
+  columnLabel="title"
   columns="{{columns}}"
   dataSource="{{data}}"
   checked="{{true}}"

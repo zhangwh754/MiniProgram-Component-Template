@@ -16,6 +16,8 @@
 <MTable
   headerClassName="header-class"
   rowClassName="row-class"
+  columnKey="key"
+  columnLabel="title"
   columns="{{columns}}"
   dataSource="{{data}}"
   border="{{false}}"

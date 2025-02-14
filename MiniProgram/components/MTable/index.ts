@@ -13,6 +13,19 @@ Component({
       type: Array,
       value: [],
     },
+    rowId: {
+      type: String,
+      value: "id",
+    },
+    columnKey: {
+      type: String,
+      value: "value",
+    },
+    columnLabel: {
+      type: String,
+      value: "label",
+    },
+
     scroll: {
       type: Boolean,
       value: false,
@@ -52,6 +65,8 @@ Component({
   },
 
   data: {
+    _columns: [],
+
     _checkedIds: [],
     _checkedAllStatus: "none", // all | part | none
 
@@ -61,6 +76,17 @@ Component({
   lifetimes: {},
 
   observers: {
+    columns: function (columns) {
+      this.setData({
+        _columns: columns.map(
+          (item: { [key: string]: any }, index: number) => ({
+            ...item,
+            __rowId: item[this.data.rowId] || index,
+          })
+        ),
+      });
+    },
+
     checkedIds: function (checkedIds) {
       this.setData({
         _checkedIds: checkedIds,
@@ -105,7 +131,7 @@ Component({
         });
       } else {
         this.setData({
-          checkedIds: this.data.dataSource.map((item) => item.id),
+          checkedIds: this.data.dataSource.map((item) => item[this.data.rowId]),
           _checkedAllStatus: "all",
         });
       }

@@ -1,3 +1,10 @@
 <MTitle title="横向滚动表格" />
 
-<MTable scroll="{{true}}" columns="{{columns}}" dataSource="{{data}}" bind:action="bindAction" />
+<MTable
+  scroll="{{true}}"
+  columnKey="key"
+  columnLabel="title"
+  columns="{{columns}}"
+  dataSource="{{data}}"
+  bind:action="bindAction"
+/>
